@@ -1,0 +1,194 @@
+
+.app {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  color: #4338ca;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.app-header p {
+  color: #64748b;
+}
+
+.task-form {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+}
+
+.task-form h2 {
+  margin-bottom: 18px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 11px;
+  font: inherit;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  margin-bottom: 12px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 75px;
+}
+
+button {
+  padding: 10px 14px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.column {
+  background: #e9edf5;
+  border-radius: 12px;
+  padding: 15px;
+  min-width: 0;
+  min-height: 240px;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.column-header h2 {
+  font-size: 19px;
+}
+
+.task-count {
+  background: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.column-to-do {
+  border-top: 4px solid #6366f1;
+}
+
+.column-in-progress {
+  border-top: 4px solid #f59e0b;
+}
+
+.column-done {
+  border-top: 4px solid #10b981;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.task-card {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow-wrap: anywhere;
+}
+
+.task-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.task-description {
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.status-label {
+  display: block;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.status-label select {
+  display: block;
+  margin: 7px 0 0;
+  font-size: 13px;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.card-actions button {
+  font-size: 13px;
+  padding: 8px 12px;
+}
+
+.secondary {
+  background: #64748b;
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.empty-message {
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+  padding: 25px 5px;
+}
+
+@media (max-width: 850px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 20px 12px;
+  }
+
+  .app-header h1 {
+    font-size: 26px;
+  }
+
+  .task-form {
+    padding: 16px;
+  }
+}
